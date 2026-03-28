@@ -1,0 +1,18 @@
+//checks if array is sorted.
+#include <bits/stdc++.h>
+
+int main() {
+    // Write C++ code here
+    int arr[5];
+    for (int i=0;i<5;i++){
+        std::cin>>arr[i];
+    }
+    bool iscon=true;
+    for (int i=1;i<5;i++){
+        if (arr[i-1]>arr[i])
+            iscon=false;
+            break;
+    }
+    std::cout<<(iscon ? "true":"false");
+    return 0;
+}
