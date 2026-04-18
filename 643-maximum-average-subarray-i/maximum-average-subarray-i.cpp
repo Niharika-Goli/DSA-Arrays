@@ -5,12 +5,11 @@ public:
         for (int i=0;i<k;i++){
             sum+=nums[i];
         }
-        double maxsum=sum/k;
+        double maxavg=sum/k;
         for (int i=k;i<nums.size();i++){
-            sum=sum-nums[i-k]+nums[i];
-            maxsum=max(maxsum,sum/k);
+            sum=sum+nums[i]-nums[i-k];
+            maxavg=max(maxavg,sum/k);
         }
-        return maxsum;
-        
+        return maxavg;
     }
 };
