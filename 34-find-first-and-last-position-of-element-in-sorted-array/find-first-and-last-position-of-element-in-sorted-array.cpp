@@ -1,20 +1,19 @@
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
-        int startingPosition = -1, endingPosition = -1;
-        int n = nums.size();
-        for(int i=0; i<n; i++){
-            if(nums[i] == target){
-                startingPosition = i;
+        int st=-1,en=-1;
+        for (int i=0;i<nums.size();i++){
+            if (nums[i]==target){
+                st=i;
                 break;
             }
         }
-        for(int i=n-1; i>=0; i--){
-            if(nums[i] == target){
-                endingPosition = i;
+        for (int i=nums.size()-1;i>=0;i--){
+            if (nums[i]==target){
+                en=i;
                 break;
             }
         }
-        return {startingPosition, endingPosition};
+        return {st,en};
     }
 };
