@@ -9,7 +9,7 @@ for (int i = 0; i < nums1.size(); i++) {
 }
 
 for (int i = 0; i < nums2.size(); i++) {
-    if (freq[nums2[i]] == 1) {
+    if (freq[nums2[i]] >= 1) {
         res.push_back(nums2[i]);
         freq[nums2[i]] = 0;
     }
